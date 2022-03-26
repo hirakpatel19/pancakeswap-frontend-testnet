@@ -106,6 +106,7 @@ const AddressInputSelect: React.FC<AddressInputSelectProps> = ({
   }, [value, onValidAddress, setState])
 
   return (
+    // @ts-ignore
     <Box position="relative" {...props}>
       <Input
         placeholder={t('Search %subject%', { subject: t('Address').toLowerCase() })}
