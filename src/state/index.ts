@@ -16,14 +16,14 @@ import storage from 'redux-persist/lib/storage'
 import burn from './burn/reducer'
 import farmsReducer from './farms'
 import { updateVersion } from './global/actions'
-// import infoReducer from './info'
+import infoReducer from './info'
 import lists from './lists/reducer'
-// import lotteryReducer from './lottery'
+import lotteryReducer from './lottery'
 import mint from './mint/reducer'
 import multicall from './multicall/reducer'
-// import nftMarketReducer from './nftMarket/reducer'
-// import poolsReducer from './pools'
-// import predictionsReducer from './predictions'
+import nftMarketReducer from './nftMarket/reducer'
+import poolsReducer from './pools'
+import predictionsReducer from './predictions'
 import swap from './swap/reducer'
 import transactions from './transactions/reducer'
 import user from './user/reducer'
@@ -57,13 +57,13 @@ const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
     farms: farmsReducer,
-    // pools: poolsReducer,
-    // predictions: predictionsReducer,
-    // lottery: lotteryReducer,
-    // info: infoReducer,
-    // nftMarket: nftMarketReducer,
+    pools: poolsReducer,
+    predictions: predictionsReducer,
+    lottery: lotteryReducer,
+    info: infoReducer,
+    nftMarket: nftMarketReducer,
 
-    // limitOrders,
+    limitOrders,
 
     // Exchange
     user,

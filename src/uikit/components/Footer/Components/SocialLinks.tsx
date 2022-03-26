@@ -8,7 +8,7 @@ import { socials } from "../config";
 
 const SocialLinks: React.FC<FlexProps> = ({ ...props }) => (
   <Flex {...props}>
-    {socials.map((social, index) => {
+    {/* {socials.map((social, index) => {
       const iconProps = {
         width: "20px",
         color: darkColors.textSubtle,
@@ -32,7 +32,7 @@ const SocialLinks: React.FC<FlexProps> = ({ ...props }) => (
           <Icon {...iconProps} />
         </Link>
       );
-    })}
+    })} */}
   </Flex>
 );
 

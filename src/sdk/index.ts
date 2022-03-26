@@ -2,7 +2,6 @@ import JSBI from 'jsbi'
 export { JSBI }
 
 export {
-  BigintIsh,
   ChainId,
   TradeType,
   Rounding,
@@ -10,8 +9,9 @@ export {
   FACTORY_ADDRESS_MAP,
   INIT_CODE_HASH,
   INIT_CODE_HASH_MAP,
-  MINIMUM_LIQUIDITY
+  MINIMUM_LIQUIDITY,
 } from './constants'
+export type { BigintIsh } from './constants'
 
 export * from './errors'
 export * from './entities'
