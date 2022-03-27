@@ -1,5 +1,5 @@
-import ItemsMock from "../DropdownMenu/mock";
-import { MenuItemsType } from "../MenuItems/types";
+import ItemsMock from '../DropdownMenu/mock'
+import { MenuItemsType } from '../MenuItems/types'
 import {
   SwapFillIcon,
   SwapIcon,
@@ -10,47 +10,47 @@ import {
   MoreIcon,
   TrophyIcon,
   TrophyFillIcon,
-} from "../Svg";
+} from '../Svg'
 
 const MenuItemsMock: MenuItemsType[] = [
   {
-    label: "Swap",
-    href: "/swap",
+    label: 'Swap',
+    href: '/swap',
     icon: SwapIcon,
     fillIcon: SwapFillIcon,
     items: ItemsMock,
     showItemsOnMobile: false,
   },
   {
-    label: "Earn",
-    href: "/earn",
+    label: 'Earn',
+    href: '/earn',
     icon: EarnIcon,
     fillIcon: EarnFillIcon,
     items: ItemsMock,
     showItemsOnMobile: true,
   },
   {
-    label: "Gagnez des jetons",
-    href: "/win",
+    label: 'Gagnez des jetons',
+    href: '/win',
     icon: TrophyIcon,
     fillIcon: TrophyFillIcon,
     items: ItemsMock,
     showItemsOnMobile: true,
   },
   {
-    label: "NFT",
-    href: "/nft",
+    label: 'NFT',
+    href: '/nft',
     icon: NftIcon,
     fillIcon: NftFillIcon,
     items: ItemsMock,
   },
   {
-    label: "More",
-    href: "/more",
+    label: 'More',
+    href: '/more',
     icon: MoreIcon,
     items: ItemsMock,
     showItemsOnMobile: true,
   },
-];
+]
 
-export default MenuItemsMock;
+export default MenuItemsMock

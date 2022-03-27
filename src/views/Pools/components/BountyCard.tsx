@@ -1,16 +1,4 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardBody,
-  Flex,
-  Heading,
-  HelpIcon,
-  Skeleton,
-  Text,
-  useModal,
-  useTooltip,
-} from 'uikit'
+import { Box, Button, Card, CardBody, Flex, Heading, HelpIcon, Skeleton, Text, useModal, useTooltip } from 'uikit'
 import BigNumber from 'bignumber.js'
 import { AnimatedBalance as Balance } from 'components/Balance'
 import { useTranslation } from 'contexts/Localization'

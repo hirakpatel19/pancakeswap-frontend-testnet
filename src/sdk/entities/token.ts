@@ -17,7 +17,7 @@ export class Token extends Currency {
     decimals: number,
     symbol?: string,
     name?: string,
-    projectLink?: string
+    projectLink?: string,
   ) {
     super(decimals, symbol, name)
     this.chainId = chainId
@@ -72,7 +72,7 @@ export const WETH = {
     18,
     'WBNB',
     'Wrapped BNB',
-    'https://www.binance.org'
+    'https://www.binance.org',
   ),
   [ChainId.TESTNET]: new Token(
     ChainId.TESTNET,
@@ -80,6 +80,6 @@ export const WETH = {
     18,
     'WBNB',
     'Wrapped BNB',
-    'https://www.binance.org'
+    'https://www.binance.org',
   ),
 }

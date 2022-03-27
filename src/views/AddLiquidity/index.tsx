@@ -202,7 +202,7 @@ export default function AddLiquidity() {
           logError(err)
           console.error(`Add Liquidity failed`, err, args, value)
         }
-        console.log("args", args)
+        console.log('args', args)
         setLiquidityState({
           attemptingTxn: false,
           liquidityErrorMessage: err && err.code !== 4001 ? `Add Liquidity failed: ${err.message}` : undefined,

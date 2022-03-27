@@ -1,6 +1,6 @@
-import styled, { css, keyframes } from "styled-components";
-import { FC, useEffect } from "react";
-import { Box, BoxProps } from "../Box";
+import styled, { css, keyframes } from 'styled-components'
+import { FC, useEffect } from 'react'
+import { Box, BoxProps } from '../Box'
 
 const unmountAnimation = keyframes`
     0% {
@@ -9,7 +9,7 @@ const unmountAnimation = keyframes`
     100% {
       opacity: 0;
     }
-  `;
+  `
 
 const mountAnimation = keyframes`
     0% {
@@ -18,7 +18,7 @@ const mountAnimation = keyframes`
     100% {
      opacity: 1;
     }
-  `;
+  `
 
 const StyledOverlay = styled(Box)<{ isUnmounting?: boolean }>`
   position: fixed;
@@ -35,27 +35,27 @@ const StyledOverlay = styled(Box)<{ isUnmounting?: boolean }>`
     css`
       animation: ${unmountAnimation} 350ms ease forwards;
     `}
-`;
+`
 
 const BodyLock = () => {
   useEffect(() => {
     document.body.style.cssText = `
       overflow: hidden;
-    `;
-    document.body.style.overflow = "hidden";
+    `
+    document.body.style.overflow = 'hidden'
     return () => {
       document.body.style.cssText = `
         overflow: visible;
         overflow: overlay;
-      `;
-    };
-  }, []);
+      `
+    }
+  }, [])
 
-  return null;
-};
+  return null
+}
 
 interface OverlayProps extends BoxProps {
-  isUnmounting?: boolean;
+  isUnmounting?: boolean
 }
 
 export const Overlay: FC<OverlayProps> = (props) => {
@@ -64,7 +64,7 @@ export const Overlay: FC<OverlayProps> = (props) => {
       <BodyLock />
       <StyledOverlay role="presentation" {...props} />
     </>
-  );
-};
+  )
+}
 
-export default Overlay;
+export default Overlay

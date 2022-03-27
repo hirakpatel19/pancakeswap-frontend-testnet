@@ -1,21 +1,21 @@
-import React from "react";
-import times from "lodash/times";
-import random from "lodash/random";
-import styled from "styled-components";
-import Flex from "../Box/Flex";
-import Box from "../Box/Box";
-import Text from "../Text/Text";
-import BackgroundImage from "./BackgroundImage";
-import Img from "./Image";
-import TokenImage from "./TokenImage";
-import TokenPairImage from "./TokenPairImage";
-import ProfileAvatarComponent from "./ProfileAvatar";
-import tokenList from "./tokens";
+import React from 'react'
+import times from 'lodash/times'
+import random from 'lodash/random'
+import styled from 'styled-components'
+import Flex from '../Box/Flex'
+import Box from '../Box/Box'
+import Text from '../Text/Text'
+import BackgroundImage from './BackgroundImage'
+import Img from './Image'
+import TokenImage from './TokenImage'
+import TokenPairImage from './TokenPairImage'
+import ProfileAvatarComponent from './ProfileAvatar'
+import tokenList from './tokens'
 
 export default {
-  title: "Components/Image",
+  title: 'Components/Image',
   argTypes: {},
-};
+}
 
 export const Image: React.FC = () => {
   return (
@@ -23,8 +23,8 @@ export const Image: React.FC = () => {
       <Img src="https://via.placeholder.com/800x400" width={800} height={400} alt="test" />
       <div>Image</div>
     </div>
-  );
-};
+  )
+}
 
 export const Background: React.FC = () => {
   return (
@@ -32,8 +32,8 @@ export const Background: React.FC = () => {
       <BackgroundImage src="https://via.placeholder.com/800x400" width={800} height={400} mr="16px" />
       <div>Background Image</div>
     </div>
-  );
-};
+  )
+}
 
 export const LazyImages: React.FC = () => {
   return (
@@ -49,8 +49,8 @@ export const LazyImages: React.FC = () => {
         />
       ))}
     </Flex>
-  );
-};
+  )
+}
 
 export const LazyBackgrounds: React.FC = () => {
   return (
@@ -66,21 +66,21 @@ export const LazyBackgrounds: React.FC = () => {
         />
       ))}
     </Flex>
-  );
-};
+  )
+}
 
 const StyledBox = styled(Box)`
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   flex-basis: 100px;
   text-align: center;
-`;
+`
 
 export const TokenImages: React.FC = () => {
-  const tokens = Object.values(tokenList).filter((token) => !!token?.address);
+  const tokens = Object.values(tokenList).filter((token) => !!token?.address)
   return (
     <Flex flexWrap="wrap">
       {tokens.map((token) => {
-        const src = `https://pancakeswap.finance/images/tokens/${token.address[56]}.svg`;
+        const src = `https://pancakeswap.finance/images/tokens/${token.address[56]}.svg`
 
         return (
           <StyledBox key={token.symbol} p="16px">
@@ -89,20 +89,20 @@ export const TokenImages: React.FC = () => {
             </Text>
             <TokenImage src={src} height={64} width={64} title={token.symbol} />
           </StyledBox>
-        );
+        )
       })}
     </Flex>
-  );
-};
+  )
+}
 
 export const TokenPairImages: React.FC = () => {
-  const tokens = Object.values(tokenList).filter((token) => !!token?.address);
+  const tokens = Object.values(tokenList).filter((token) => !!token?.address)
   return (
     <Flex flexWrap="wrap">
       {tokens.map((token) => {
-        const randomTokenIndex = random(0, tokens.length - 1);
-        const primarySrc = `https://pancakeswap.finance/images/tokens/${token.address[56]}.svg`;
-        const secondarySrc = `https://pancakeswap.finance/images/tokens/${tokens[randomTokenIndex].address[56]}.svg`;
+        const randomTokenIndex = random(0, tokens.length - 1)
+        const primarySrc = `https://pancakeswap.finance/images/tokens/${token.address[56]}.svg`
+        const secondarySrc = `https://pancakeswap.finance/images/tokens/${tokens[randomTokenIndex].address[56]}.svg`
 
         return (
           <StyledBox key={token.symbol} p="16px">
@@ -123,11 +123,11 @@ export const TokenPairImages: React.FC = () => {
               title={token.symbol}
             />
           </StyledBox>
-        );
+        )
       })}
     </Flex>
-  );
-};
+  )
+}
 
 export const ProfileAvatar: React.FC = () => {
   return (
@@ -137,5 +137,5 @@ export const ProfileAvatar: React.FC = () => {
       <Text>Shows placeholder if the image does not download</Text>
       <ProfileAvatarComponent src="https://via.placeholder.com" width={64} height={64} alt="test" />
     </div>
-  );
-};
+  )
+}

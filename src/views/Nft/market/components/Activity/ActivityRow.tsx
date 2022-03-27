@@ -1,15 +1,4 @@
-import {
-  Box,
-  Flex,
-  Text,
-  Td,
-  IconButton,
-  Link,
-  OpenNewIcon,
-  useMatchBreakpoints,
-  useModal,
-  Skeleton,
-} from 'uikit'
+import { Box, Flex, Text, Td, IconButton, Link, OpenNewIcon, useMatchBreakpoints, useModal, Skeleton } from 'uikit'
 import { NextLinkFromReactRouter } from 'components/NextLink'
 import { Activity, NftToken } from 'state/nftMarket/types'
 import { Price } from 'sdk'

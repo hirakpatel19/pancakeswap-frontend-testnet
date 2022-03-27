@@ -1,14 +1,6 @@
 import { useState } from 'react'
 import { useWeb3React } from '@web3-react/core'
-import {
-  Card,
-  CardBody,
-  PlayCircleOutlineIcon,
-  Button,
-  useTooltip,
-  ArrowUpIcon,
-  ArrowDownIcon,
-} from 'uikit'
+import { Card, CardBody, PlayCircleOutlineIcon, Button, useTooltip, ArrowUpIcon, ArrowDownIcon } from 'uikit'
 import { useTranslation } from 'contexts/Localization'
 import { useAppDispatch } from 'state'
 import { BetPosition, NodeLedger, NodeRound } from 'state/types'

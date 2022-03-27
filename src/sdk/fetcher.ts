@@ -11,8 +11,8 @@ import { Token } from './entities/token'
 
 let TOKEN_DECIMALS_CACHE: { [chainId: number]: { [address: string]: number } } = {
   [ChainId.MAINNET]: {
-    '0xE0B7927c4aF23765Cb51314A0E0521A9645F0E2A': 9 // DGD
-  }
+    '0xE0B7927c4aF23765Cb51314A0E0521A9645F0E2A': 9, // DGD
+  },
 }
 
 /**
@@ -37,7 +37,7 @@ export abstract class Fetcher {
     address: string,
     provider = getDefaultProvider(getNetwork(chainId)),
     symbol?: string,
-    name?: string
+    name?: string,
   ): Promise<Token> {
     const parsedDecimals =
       typeof TOKEN_DECIMALS_CACHE?.[chainId]?.[address] === 'number'
@@ -47,8 +47,8 @@ export abstract class Fetcher {
               ...TOKEN_DECIMALS_CACHE,
               [chainId]: {
                 ...TOKEN_DECIMALS_CACHE?.[chainId],
-                [address]: decimals
-              }
+                [address]: decimals,
+              },
             }
             return decimals
           })
@@ -64,7 +64,7 @@ export abstract class Fetcher {
   public static async fetchPairData(
     tokenA: Token,
     tokenB: Token,
-    provider = getDefaultProvider(getNetwork(tokenA.chainId))
+    provider = getDefaultProvider(getNetwork(tokenA.chainId)),
   ): Promise<Pair> {
     invariant(tokenA.chainId === tokenB.chainId, 'CHAIN_ID')
     const address = Pair.getAddress(tokenA, tokenB)

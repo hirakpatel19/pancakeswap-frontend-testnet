@@ -47,6 +47,7 @@ const BunniesSection = () => {
           </Flex>
         </StyledTextContainer>
       </LandingBodyWrapper>
+      // @ts-ignore
       <Box position="absolute" bottom="-2px" width="100%">
         {isDark ? <SlideSvgDark width="100%" /> : <SlideSvgLight width="100%" />}
       </Box>

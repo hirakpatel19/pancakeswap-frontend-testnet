@@ -115,6 +115,7 @@ const AddressInputSelect: React.FC<AddressInputSelectProps> = ({
         style={{ position: 'relative', zIndex: 16, paddingRight: '40px' }}
       />
       {isFetching && (
+        // @ts-ignore
         <Box position="absolute" top="12px" right="16px" style={{ zIndex: 17 }}>
           <CircleLoader />
         </Box>

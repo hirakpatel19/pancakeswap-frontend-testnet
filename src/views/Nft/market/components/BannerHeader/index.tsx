@@ -16,6 +16,7 @@ const BannerHeader: React.FC<BannerHeaderProps> = ({ bannerImage, bannerAlt, ava
         <StyledBannerImageWrapper>
           <Image src={bannerImage} alt={bannerAlt} layout="fill" objectFit="cover" priority />
         </StyledBannerImageWrapper>
+        // @ts-ignore
         <Box position="absolute" bottom={0} left={-4}>
           <Flex alignItems="flex-end">
             {avatar}

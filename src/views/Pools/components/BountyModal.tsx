@@ -2,17 +2,7 @@ import { useMemo } from 'react'
 import BigNumber from 'bignumber.js'
 import { useWeb3React } from '@web3-react/core'
 import styled from 'styled-components'
-import {
-  Modal,
-  Text,
-  Flex,
-  Button,
-  HelpIcon,
-  AutoRenewIcon,
-  useTooltip,
-  Message,
-  MessageText,
-} from 'uikit'
+import { Modal, Text, Flex, Button, HelpIcon, AutoRenewIcon, useTooltip, Message, MessageText } from 'uikit'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useCakeVaultContract } from 'hooks/useContract'
 import useTheme from 'hooks/useTheme'

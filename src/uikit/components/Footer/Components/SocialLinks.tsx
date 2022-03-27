@@ -1,10 +1,10 @@
-import React from "react";
-import { darkColors } from "../../../theme";
-import { FlexProps } from "../../Box";
-import Flex from "../../Box/Flex";
-import Dropdown from "../../Dropdown/Dropdown";
-import Link from "../../Link/Link";
-import { socials } from "../config";
+import React from 'react'
+import { darkColors } from '../../../theme'
+import { FlexProps } from '../../Box'
+import Flex from '../../Box/Flex'
+import Dropdown from '../../Dropdown/Dropdown'
+import Link from '../../Link/Link'
+import { socials } from '../config'
 
 const SocialLinks: React.FC<FlexProps> = ({ ...props }) => (
   <Flex {...props}>
@@ -34,6 +34,6 @@ const SocialLinks: React.FC<FlexProps> = ({ ...props }) => (
       );
     })} */}
   </Flex>
-);
+)
 
-export default React.memo(SocialLinks, () => true);
+export default React.memo(SocialLinks, () => true)

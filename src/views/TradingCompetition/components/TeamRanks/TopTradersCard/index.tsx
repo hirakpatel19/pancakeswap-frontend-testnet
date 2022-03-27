@@ -1,16 +1,5 @@
 import { useState, useEffect } from 'react'
-import {
-  Card,
-  CardFooter,
-  CardHeader,
-  Heading,
-  Text,
-  TabMenu,
-  Tab,
-  Box,
-  Flex,
-  ExpandableLabel,
-} from 'uikit'
+import { Card, CardFooter, CardHeader, Heading, Text, TabMenu, Tab, Box, Flex, ExpandableLabel } from 'uikit'
 import { useTranslation } from 'contexts/Localization'
 import { TeamRanksProps } from '../../../types'
 import TopTradersGrid from './TopTradersGrid'

@@ -17,14 +17,14 @@ Sentry.init({
   dsn: SENTRY_DSN,
   integrations: [
     new Sentry.Integrations.Breadcrumbs({
-      console: ENV === 'development',
+      console: ENV === 'production',
     }),
     new Sentry.Integrations.GlobalHandlers({
       onerror: false,
       onunhandledrejection: false,
     }),
   ],
-  environment: ENV === 'development' ? 'production' : 'development',
+  environment: ENV === 'production' ? 'production' : 'development',
   // Adjust this value in production, or use tracesSampler for greater control
   tracesSampleRate: 0,
   // ...

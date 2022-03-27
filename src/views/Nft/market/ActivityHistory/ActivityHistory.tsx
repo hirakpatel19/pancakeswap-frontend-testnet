@@ -1,17 +1,7 @@
 import { useEffect, useState } from 'react'
 import { isAddress } from 'utils'
 import { useAppDispatch } from 'state'
-import {
-  ArrowBackIcon,
-  ArrowForwardIcon,
-  Box,
-  Button,
-  Flex,
-  Table,
-  Text,
-  Th,
-  useMatchBreakpoints,
-} from 'uikit'
+import { ArrowBackIcon, ArrowForwardIcon, Box, Button, Flex, Table, Text, Th, useMatchBreakpoints } from 'uikit'
 import { getCollectionActivity } from 'state/nftMarket/helpers'
 import Container from 'components/Layout/Container'
 import TableLoader from 'components/TableLoader'

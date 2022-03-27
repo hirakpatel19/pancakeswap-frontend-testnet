@@ -1,16 +1,6 @@
 import { useState } from 'react'
 import { JSBI, Pair, Percent } from 'sdk'
-import {
-  Button,
-  Text,
-  ChevronUpIcon,
-  ChevronDownIcon,
-  Card,
-  CardBody,
-  Flex,
-  CardProps,
-  AddIcon,
-} from 'uikit'
+import { Button, Text, ChevronUpIcon, ChevronDownIcon, Card, CardBody, Flex, CardProps, AddIcon } from 'uikit'
 import styled from 'styled-components'
 import { NextLinkFromReactRouter } from 'components/NextLink'
 import { useTranslation } from 'contexts/Localization'

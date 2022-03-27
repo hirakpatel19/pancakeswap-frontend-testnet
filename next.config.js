@@ -5,7 +5,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 const sentryWebpackPluginOptions =
-  process.env.VERCEL_ENV === 'development'
+  process.env.VERCEL_ENV === 'production'
     ? {
         // Additional config options for the Sentry Webpack plugin. Keep in mind that
         // the following options are set automatically, and overriding them is not

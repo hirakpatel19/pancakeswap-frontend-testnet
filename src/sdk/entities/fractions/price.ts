@@ -21,7 +21,7 @@ export class Price extends Fraction {
       prices.push(
         route.path[i].equals(pair.token0)
           ? new Price(pair.reserve0.currency, pair.reserve1.currency, pair.reserve0.raw, pair.reserve1.raw)
-          : new Price(pair.reserve1.currency, pair.reserve0.currency, pair.reserve1.raw, pair.reserve0.raw)
+          : new Price(pair.reserve1.currency, pair.reserve0.currency, pair.reserve1.raw, pair.reserve0.raw),
       )
     }
     return prices.slice(1).reduce((accumulator, currentValue) => accumulator.multiply(currentValue), prices[0])
@@ -35,7 +35,7 @@ export class Price extends Fraction {
     this.quoteCurrency = quoteCurrency
     this.scalar = new Fraction(
       JSBI.exponentiate(TEN, JSBI.BigInt(baseCurrency.decimals)),
-      JSBI.exponentiate(TEN, JSBI.BigInt(quoteCurrency.decimals))
+      JSBI.exponentiate(TEN, JSBI.BigInt(quoteCurrency.decimals)),
     )
   }
 

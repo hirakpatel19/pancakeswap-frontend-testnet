@@ -100,8 +100,8 @@ export default function Swap() {
   const { refreshBlockNumber, isLoading } = useRefreshBlockNumberID()
 
   // console.log("router", router)
-  if(router.pathname === "/"){
-    router.push("/swap")
+  if (router.pathname === '/') {
+    router.push('/swap')
   }
 
   useEffect(() => {

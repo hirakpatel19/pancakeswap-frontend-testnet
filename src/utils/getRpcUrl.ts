@@ -1,7 +1,7 @@
 import sample from 'lodash/sample'
 
 if (
-  process.env.NODE_ENV !== 'development' &&
+  process.env.NODE_ENV !== 'production' &&
   (!process.env.NEXT_PUBLIC_NODE_1 || !process.env.NEXT_PUBLIC_NODE_2 || !process.env.NEXT_PUBLIC_NODE_3)
 ) {
   throw Error('One base RPC URL is undefined')

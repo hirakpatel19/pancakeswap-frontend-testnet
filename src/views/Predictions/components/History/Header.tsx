@@ -1,15 +1,5 @@
 import { useWeb3React } from '@web3-react/core'
-import {
-  ArrowForwardIcon,
-  Box,
-  Button,
-  Radio,
-  Flex,
-  Heading,
-  Text,
-  ButtonMenu,
-  ButtonMenuItem,
-} from 'uikit'
+import { ArrowForwardIcon, Box, Button, Radio, Flex, Heading, Text, ButtonMenu, ButtonMenuItem } from 'uikit'
 import { useAppDispatch } from 'state'
 import { HistoryFilter } from 'state/types'
 import { setHistoryFilter, setHistoryPaneState } from 'state/predictions'

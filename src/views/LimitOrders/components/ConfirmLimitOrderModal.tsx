@@ -1,15 +1,5 @@
 import { Currency } from 'sdk'
-import {
-  ArrowDownIcon,
-  Button,
-  Flex,
-  InjectedModalProps,
-  Message,
-  MessageText,
-  Modal,
-  Spinner,
-  Text,
-} from 'uikit'
+import { ArrowDownIcon, Button, Flex, InjectedModalProps, Message, MessageText, Modal, Spinner, Text } from 'uikit'
 import { CurrencyLogo } from 'components/Logo'
 import { TransactionErrorContent, TransactionSubmittedContent } from 'components/TransactionConfirmationModal'
 import { useTranslation } from 'contexts/Localization'
