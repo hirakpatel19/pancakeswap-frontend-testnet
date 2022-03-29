@@ -19,6 +19,28 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
 `
+const Small = styled.div`
+  font-size: 80%;
+  font-weight: 400;
+  margin-top: 10px;
+`
+const Badge = styled.div`
+  color: #fff;
+  background-color: #de4437;
+  padding-right: 0.6em;
+  padding-left: 0.6em;
+  border-radius: 10rem;
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease-in-out;
+`
 
 const StyledNav = styled.nav`
   display: flex;
@@ -133,6 +155,13 @@ const Menu: React.FC<NavProps> = ({
           <StyledNav>
             <Flex>
               <Logo isDark={isDark} href={homeLink?.href ?? '/swap'} />
+              <Small>
+                <sup>
+                  <Badge>
+                    <span>TESTNET</span>
+                  </Badge>
+                </sup>
+              </Small>
               {!isMobile && <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />}
             </Flex>
             <Flex alignItems="center" height="100%">
